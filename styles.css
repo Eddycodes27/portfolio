@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;400&display=swap');
+
+body {
+    background-color: whitesmoke;
+    overflow-x: hidden;
+    font-family: 'oswald', 'sans-serif';
+}
+
+.header {
+    width: 100vw;
+    height: 25vh;
+    background-image: url('Welcome.jpg');
+    font-size: 55px;
+    text-align: center;
+    color: whitesmoke;
+    background-size: cover;
+    box-shadow: 0px 10px 5px 1px grey;
+    margin-bottom: 20px;
+}
+
+.header h1 {
+    margin: 0;
+}
+
+.about {
+    justify-content: center;
+}
+
+.about h3 {
+    text-align: center;
+    font-size: 35px;
+    font-weight: normal;
+    max-width: 1500px;
+    vertical-align: middle;
+    margin: auto;
+}
+
+.projects h1 {
+    text-align: center;
+    font-size: 45px;
+    text-decoration: underline;
+}
+
+.grubbr img {
+    border-radius: 10px;
+    height: 320px;
+    width: 400px;
+    margin-left: 50px;
+}
+
+.grubbr h3 {
+    margin-left: 130px;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+  }
+  
+  menu {
+    --size: 2.5rem;
+    --radius: 6rem;
+    --padding: 1rem;
+    --bg-color: #033313;
+    --fg-color: white;
+    --hi-color: #033313;
+    position: fixed;
+    bottom: var(--padding);
+    right: var(--padding);
+  }
+  
+  menu > * {
+    position: absolute;
+    display: grid;
+    place-content: center;
+    border-radius: 50%;
+    background: var(--bg-color);
+    color: var(--fg-color);
+    text-decoration: none;
+    box-shadow: 0px 0px 9px 0px rgba(0, 0, 0, 0.6);
+  }
+  
+  menu > .action {
+    --factor: 0;
+    width: var(--size);
+    height: var(--size);
+    right: calc(0.35 * var(--size));
+    bottom: calc(0.35 * var(--size));
+    opacity: 0;
+    transform: rotate(calc(-1 * var(--angle))) translateY(calc(-1 * var(--radius) * var(--factor))) rotate(var(--angle));
+    transition: transform 250ms ease-in-out, opacity 250ms ease-in-out, box-shadow 250ms ease-in-out, color 250ms ease-in-out;
+  }
+  
+  menu > .action:hover, menu > .trigger:hover {
+    color: var(--hi-color);
+    box-shadow: 0px 0px 0px 0.35rem rgba(0, 0, 0, 0.2);
+  }
+  
+  menu.open > .action {
+    --factor: 1;
+    opacity: 1;
+  }
+  
+  menu > .action:nth-child(1) {
+    --angle: 0deg;
+    transition-delay: 0ms;
+  }
+  
+  menu > .action:nth-child(2) {
+    --angle: 30deg;
+    transition-delay: 50ms;
+  }
+  
+  menu > .action:nth-child(3) {
+    --angle: 60deg;
+    transition-delay: 100ms;
+  }
+  
+  menu > .action:nth-child(4) {
+    --angle: 90deg;
+    transition-delay: 150ms;
+  }
+  
+  menu > .trigger {
+    width: calc(1.6 * var(--size));
+    height: calc(1.6 * var(--size));
+    bottom: 0;
+    right: 0;
+    font-size: 2rem;
+    transition: box-shadow 250ms ease-in-out, color 250ms ease-in-out;
+  }
+  
+  menu > .trigger > i {
+    transition: transform 250ms ease-in-out;
+  }
+  
+  menu.open > .trigger > i {
+    transform: rotate(-135deg);
+  }
+  
