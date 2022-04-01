@@ -19,7 +19,7 @@ body {
 }
 
 .header h1 {
-    margin: 0;
+    margin: auto;
 }
 
 .about {
@@ -50,6 +50,17 @@ body {
 
 .grubbr h3 {
     margin-left: 130px;
+}
+
+.keepGoing img {
+  border-radius: 10px;
+  height: 320px;
+  width: 400px;
+  margin-left: 50px;
+}
+
+.keepGoing h3 {
+  margin-left: 35px;
 }
 
 * {
